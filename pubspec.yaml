@@ -1,0 +1,162 @@
+name: zcanvas
+description: >
+  ZCANVAS - Production-grade engine-driven Flutter canvas editor with modular
+  architecture, strict layer hierarchy (Repository → Engine → Controller → UI),
+  and complete dependency injection via get_it.
+
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ============================================================================
+  # DEPENDENCY INJECTION & SERVICE LOCATOR
+  # ============================================================================
+  # Static service locator for strict modular registration without imports
+  get_it: ^7.6.0
+
+  # ============================================================================
+  # STATE MANAGEMENT
+  # ============================================================================
+  # Reactive state management with strong typing
+  provider: ^6.0.0
+  # Stream-based reactive programming
+  rxdart: ^0.27.0
+
+  # ============================================================================
+  # PERSISTENCE & STORAGE
+  # ============================================================================
+  # File system access for design exports
+  path_provider: ^2.1.0
+  # Local persistent key-value storage
+  shared_preferences: ^2.2.0
+  # Secure storage for sensitive data
+  flutter_secure_storage: ^9.0.0
+  # SQLite database for complex queries
+  sqflite: ^2.3.0
+  # JSON serialization for repositories
+  json_annotation: ^4.8.0
+
+  # ============================================================================
+  # NETWORKING & API
+  # ============================================================================
+  # HTTP client with interceptors
+  http: ^1.1.0
+  # WebSocket for real-time sync
+  web_socket_channel: ^2.4.0
+
+  # ============================================================================
+  # LOGGING & MONITORING
+  # ============================================================================
+  # Structured logging with levels
+  logger: ^2.0.0
+  # Crash reporting and analytics
+  firebase_core: ^2.24.0
+  firebase_crashlytics: ^3.4.0
+  firebase_analytics: ^10.7.0
+
+  # ============================================================================
+  # SERIALIZATION & VALIDATION
+  # ============================================================================
+  # Code generation for JSON serialization
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+  # Validation library
+  validators: ^3.0.0
+
+  # ============================================================================
+  # UI & RENDERING
+  # ============================================================================
+  # Material Design 3
+  flutter_material_design_package: ^1.0.0
+  # Animation utilities
+  animations: ^2.0.0
+  # Custom painting and rendering
+  flutter_custom_paint: ^1.0.0
+  # Canvas rendering support
+  vector_graphics: ^1.1.0
+
+  # ============================================================================
+  # PLUGIN & EXTENSION SYSTEM
+  # ============================================================================
+  # Plugin interface and loading
+  plugin: ^0.3.0
+  # Reflection and introspection
+  mirrors: ^0.12.0
+
+  # ============================================================================
+  # UTILITIES & HELPERS
+  # ============================================================================
+  # UUID generation
+  uuid: ^4.0.0
+  # Date/time utilities
+  intl: ^0.19.0
+  # Async utilities
+  async: ^2.11.0
+  # Collection utilities
+  collection: ^1.17.0
+  # Deep equality and copying
+  equatable: ^2.0.0
+  # Environment variables
+  dotenv: ^5.1.0
+
+  # ============================================================================
+  # PERFORMANCE & CACHING
+  # ============================================================================
+  # In-memory caching
+  lru_cache: ^1.1.0
+  # Image caching
+  cached_network_image: ^3.3.0
+
+  # ============================================================================
+  # TESTING (runtime only in dev)
+  # ============================================================================
+  # Test utilities
+  mocktail: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code quality
+  flutter_lints: ^3.0.0
+
+  # Testing
+  test: ^1.24.0
+  integration_test:
+    sdk: flutter
+
+  # Build and generation
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+
+  # Mocking and fixtures
+  mocktail: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets for design templates, themes
+  assets:
+    - assets/templates/
+    - assets/themes/
+    - assets/icons/
+    - .env
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+    - family: RobotoMono
+      fonts:
+        - asset: assets/fonts/RobotoMono-Regular.ttf
+        - asset: assets/fonts/RobotoMono-Bold.ttf
+          weight: 700
